@@ -31,7 +31,7 @@ func main() {
 	fmt.Println(c ^ d)
 	fmt.Println(c &^ d)
 	// Shift Operations
-	// What these shift operator does is first convert the given number
+	// What these shift operator does is it first convert the given number
 	// into binary and then take 1 and shift that 1 in the operator direction.
 	fmt.Println(c << 3)
 	fmt.Println(c >> 3)
