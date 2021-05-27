@@ -39,4 +39,34 @@ func main() {
 	fmt.Println(len(m))
 	fmt.Println(len(p))
 
+	num := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// Main array to slice from (which is also a slice type).
+	first := num[:3]  // 0 to 3rd elements
+	second := num[3:] // 3rd to last elements.
+	third := num[4:6] // 4th to 6th element.
+	fmt.Println(num)
+	fmt.Println(first)
+	fmt.Println(second)
+	fmt.Println(third)
+
+	f := []int{}
+	fmt.Println(f)
+	fmt.Println(len(f))
+	fmt.Println(cap(f))
+	f = append(f, 1)
+	fmt.Println(f)
+	fmt.Println(len(f))
+	fmt.Println(cap(f))
+	f = append(f, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+	fmt.Println(f)
+	fmt.Println(len(f))
+	fmt.Println(cap(f))
+	f = append(f, []int{0, 9, 8, 7}...) // Javascript spread operator.
+	fmt.Println(f)
+	fmt.Println(len(f))
+	fmt.Println(cap(f))
+	g := append(f[:2], f[3:]...)
+	fmt.Println(g)
+	// If you have sliced a slice then you should not have any reference to that first slice variable.
+	fmt.Println(f)
 }
