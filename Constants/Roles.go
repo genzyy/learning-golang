@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// The value of the constants should be calculable during the compile time only.
 const (
 	isAdmin = 1 << iota
 	isHeadQuarters
@@ -23,6 +24,6 @@ func main() {
 	fmt.Println(canSeeAsia)
 	fmt.Println(canSeeNA)
 	fmt.Println(canSeeSA)
-	fmt.Printf("Is HQ? %v\n", isAdmin&roles == isAdmin)
+	fmt.Printf("Is Admin? %v\n", isAdmin&roles == isAdmin)
 	fmt.Printf("Is HQ? %v\n", isHeadQuarters&roles == isHeadQuarters)
 }
